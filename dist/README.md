@@ -3,7 +3,7 @@
 
     
 ## Description 
-Search a city and view the weather forecast 
+Search a city and view a daily weather forecast and 5-day 
 
 
 ## Table of Contents 
@@ -15,19 +15,19 @@ Search a city and view the weather forecast
 
 
 ## Installation 
-Go to the relative path of the webpage and/or follow link to the webpage
+Following the link to the webpage and searching a city to show weather data.
 
 
 ## Usage 
-Search a city of your choice and click search to view a daily forecast of weather data.
+Type in a city of your choice and click search. The weather data results will show. 
     
 
 ## Credits 
-None at this time
+No collaborators at this time
 
 
 ## License 
-Third Party API 
+Third Part API - openweather
 
 ---
 🏆 
@@ -35,10 +35,10 @@ Third Party API
 ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
 
 ## Contributing 
-Open the GitHub repo and if there are open issues, view to see directions on contributions.
+View the Github repo issues tab, and follow any directions listed
 
 
 ## Tests 
-Open webpage and type in a city such as "london" and click search. View results displayed. Repeat to view other cities.
+Type in a city name such as "london" and click search, and view the displayed results. Repeat this process for other cities
 
  
