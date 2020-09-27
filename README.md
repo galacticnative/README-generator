@@ -24,5 +24,5 @@ There are no collaborators at this time.
 # License
 Node.js and NPM inquirer
 
-# Video link of Application use Example
-https://github.com/galacticnative/README-generator
+## Video link of application example
+https://drive.google.com/file/d/1zhgLv-Zd8mXssgI3tnfTn6uHlueWO5Dc/view
