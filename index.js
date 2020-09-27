@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
-
+const generateMarkdown = require('./utils/generateMarkdown');
+const fs = require('fs')
 
 const promptQuestions = () => {
     return inquirer.prompt([
@@ -70,6 +71,19 @@ const promptQuestions = () => {
     },
     {
         type: 'input',
+        name: 'credits',
+        message: 'CREDIT your collaborators by listing them.',
+        validate: creditsInput => {
+          if (creditsInput) {
+            return true;
+          } else {
+            console.log('Please enter a collaborator or type none!');
+            return false;
+          }
+        }
+    },
+    {
+        type: 'input',
         name: 'contribute',
         message: 'CONTRIBUTIONS: Provide guidelines for developers to contribute to your project.',
         validate: contributeInput => {
@@ -97,17 +111,23 @@ const promptQuestions = () => {
     ]);
 };
 
-promptQuestions();
 
+// function to write README file
+function writeToFile(data) {
+    fs.writeFile('./dist/README.md', data, err => {
+        if (err) throw err;
+    })
 
-// // function to write README file
-// function writeToFile(fileName, data) {
-// }
+}
 
-// // function to initialize program
-// function init() {
+// function to initialize program
+function init() {
+    promptQuestions()
+    .then(inputData => {
+        const createReadme = generateMarkdown(inputData)
+        writeToFile(createReadme)
+    })
+}
 
-// }
-
-// // function call to initialize program
-// init();
+// function call to initialize program
+init();
